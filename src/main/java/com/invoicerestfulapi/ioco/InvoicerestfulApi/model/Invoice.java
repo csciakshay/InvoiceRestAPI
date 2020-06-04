@@ -3,8 +3,9 @@ package com.invoicerestfulapi.ioco.InvoicerestfulApi.model;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -46,7 +47,7 @@ public class Invoice {
     @CreatedDate
     private Date invoiceDate;
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<InvoiceItem> invoiceItems = new HashSet<>();
+    private List<InvoiceItem> invoiceItems = new ArrayList<>();
 
     @PrePersist
     public void prePersist() {
@@ -106,11 +107,11 @@ public class Invoice {
         this.invoiceDate = invoiceDate;
     }
 
-    public Set<InvoiceItem> getInvoiceItems() {
+    public List<InvoiceItem> getInvoiceItems() {
         return invoiceItems;
     }
 
-    public void setInvoiceItem(Set<InvoiceItem> invoiceItems) {
+    public void setInvoiceItem(List<InvoiceItem> invoiceItems) {
         this.invoiceItems = invoiceItems;
     }
 
