@@ -7,7 +7,7 @@ import com.invoicerestfulapi.ioco.InvoicerestfulApi.model.Invoice;
 
 public interface InvoiceService {
 
-	 void addInvoice(Invoice invoice);
+	 Invoice addInvoice(Invoice invoice);
 
 	 List<Invoice> viewAllInvoices();
 

@@ -16,7 +16,7 @@ Steps to runs the endpoints are : ---
  "invoiceItems" : [{
         "quantity": "5",
         "description": "Printer",
-        "UnitPrice": "2.00"
+        "unitPrice": "2.00"
     }]
    
 }

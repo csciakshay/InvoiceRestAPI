@@ -16,8 +16,8 @@ public class DtoInvoiceService implements InvoiceService {
     InvoiceRepo repository;
 
     @Override
-    public void addInvoice(Invoice invoice) {
-        repository.save(invoice);
+    public Invoice addInvoice(Invoice invoice) {
+       return repository.save(invoice);
     }
 
     @Override
